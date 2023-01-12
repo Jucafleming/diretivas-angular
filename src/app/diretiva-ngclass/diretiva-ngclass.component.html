@@ -1,0 +1,20 @@
+<h1 style="text-align: center;">
+    <i class ="bi"
+    [class.bi-star]="!meuFavorito"
+    [class.bi-star-fill]="meuFavorito"
+    (click)="onFav()"
+    ></i>
+</h1>
+
+
+<h1 style="text-align: center;">
+    <p>Usando ngClass:</p>
+    <i class ="bi"
+    [ngClass]="{
+        'bi-star': !meuFavorito,
+        'bi-star-fill': meuFavorito
+    }"
+    (click)="onFav()"
+    ></i>
+</h1>
+
