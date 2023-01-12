@@ -1,0 +1,21 @@
+<nav class="nav nav-pills">
+  <a
+    class="nav-link"
+    aria-current="page"
+    [class.active]="aba == 'home'"
+    (click)="aba = 'home'"
+    >Home</a
+  >
+  <a class="nav-link" [class.active]="aba == 'mapa'" (click)="aba = 'mapa'"
+    >Mapa</a
+  >
+  <a class="nav-link" [class.active]="aba == 'lista'" (click)="aba = 'lista'"
+    >Lista</a
+  >
+</nav>
+
+<div class="container" [ngSwitch]="aba">
+  <p *ngSwitchCase="'mapa'">Modo mapa Ativado</p>
+  <p *ngSwitchCase="'lista'">Modo lista Ativado</p>
+  <p *ngSwitchDefault>Home</p>
+</div>
