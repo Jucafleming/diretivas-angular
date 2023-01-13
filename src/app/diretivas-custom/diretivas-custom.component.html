@@ -1,0 +1,15 @@
+<p fundoAmarelo>Fundo Amarelo</p>
+
+<button fundoAmarelo class="btn btn-prymary">se Liga</button>
+
+<p HighlightMouse>Texto com highlight quando passo o mouse</p>
+<p Highlight [defaultColor]="'gray'" [highlightColor]="'red'">
+  Texto com highlight quando passo o mouse custom
+</p>
+<div *ngIf="mostraCursos">Lista de cursos aqui</div>
+<div *ngElse="mostraCursos">nao existem cursos</div>
+
+<br>
+<button class="btn btn-primary" (click)="onMostrarCurso()">
+    mostrar ou esconder cursos
+</button>
